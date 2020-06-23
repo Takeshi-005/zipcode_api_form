@@ -46,6 +46,6 @@ export default styled(Component)`
   outline: none;
   padding: 8px;
   width: ${props => props.style?.width ?? '100%'};
-  height: ${props => props.style?.height ?? '100%'};
+  height: ${props => props.style?.height ?? '40px'};
   color: ${COLOR.text};
 `;
