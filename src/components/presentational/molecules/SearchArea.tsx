@@ -10,20 +10,12 @@ import { COLOR, DEVICE } from 'styles/style';
 // ______________________________________________________
 //
 // @ Types
-type ContainerProps = {
+type Props = {
   value: string;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
   className?: string;
   error: AxiosError | null;
-};
-type Props = ContainerProps & {};
-
-// ______________________________________________________
-//
-// @ Container
-const Container: React.FC<ContainerProps> = props => {
-  return <StyledComponent {...props} />;
 };
 
 //______________________________________________________
@@ -48,7 +40,7 @@ const Component: React.FC<Props> = props => (
 //______________________________________________________
 //
 // @ StyledComponent
-const StyledComponent = styled(Component)`
+export default styled(Component)`
   border: 1px solid ${COLOR.border};
   margin-top: 12px;
   padding: 8px;
@@ -71,5 +63,3 @@ const OverrideButton = styled(Button)`
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 `;
-
-export default Container;
